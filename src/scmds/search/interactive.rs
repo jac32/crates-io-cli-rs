@@ -103,7 +103,7 @@ pub fn handle_interactive_search(_args: &clap::ArgMatches) {
             Key::Backspace => {
                 term.pop();
             }
-            Key::Esc => {
+            Key::Esc | Key::Ctrl('c') | Key::Ctrl('d') => {
                 break;
             }
             key @ _ => {
